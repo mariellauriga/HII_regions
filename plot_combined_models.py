@@ -53,7 +53,6 @@ text(-0.5,-0.7,'galaxies', fontsize=14)
 plt.xlim(-2.5,0.5)
 plt.ylim(-2.5,6)
 
-
 y0=(-2,2)
 x0=(0,0)
 y1=(0,0)
