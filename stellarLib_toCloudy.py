@@ -96,8 +96,8 @@ print('              COMPUTED SYNTHETIC SPECTRUM', file=f)
 print('                                            ', file=f)
 print(' TIME [YR]    WAVELENGTH [A]   LOG TOTAL  LOG STELLAR  LOG NEBULAR  [ERG/SEC/A]',file=f)
 
-for i in range(1,206): # range all ages
-   for j in range(lmin,len(lambd)):
+for i in range(1,206): # range ages
+   for j in range(lmin,len(lambd)): #range wavelengths
        if flux[j,i] > 0:
            print(' ',"{:.4E}".format(Age_val[i]), '      ',"{0:.2f}".format(lambd[j]), ' ',"{0:.4f}".format(np.log10(flux[j,i])), ' ',"{0:.4f}".format(np.log10(flux[j,i])), ' ','-15.00000', file=f)
          #print(' ',"{:.4E}".format(df_age.iloc[i,0]), '      ',"{0:.2f}".format(lambd[j]), ' ',"{0:.4f}".format(np.log10(flux[j,i])), ' ',"{0:.4f}".format(np.log10(flux[j,i])), ' ','-15.00000', file=f)
